@@ -10,6 +10,7 @@ package me.finiteloop.demo.echoserver;
 import java.io.IOException;
 import java.util.Properties;
 
+import javax.ejb.Stateless;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -24,6 +25,7 @@ import javax.ws.rs.core.Response.ResponseBuilder;
  *
  */
 @Path("/echo")
+@Stateless
 public class EchoService {
 
 	Properties properties = null;

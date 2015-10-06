@@ -24,6 +24,28 @@
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
+        <!-- Import the CDI API, we use provided scope as the API is included in 
+            JBoss EAP 6 -->
+        <dependency>
+            <groupId>javax.enterprise</groupId>
+            <artifactId>cdi-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Import the Common Annotations API (JSR-250), we use provided scope 
+            as the API is included in JBoss EAP 6 -->
+        <dependency>
+            <groupId>org.jboss.spec.javax.annotation</groupId>
+            <artifactId>jboss-annotations-api_1.1_spec</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Import the EJB API, we use provided scope as the API is included in 
+            JBoss EAP 6 -->
+        <dependency>
+            <groupId>org.jboss.spec.javax.ejb</groupId>
+            <artifactId>jboss-ejb-api_3.1_spec</artifactId>
+            <scope>provided</scope>
+        </dependency>
 		<dependency>
 			<groupId>org.jboss.spec.javax.ws.rs</groupId>
 			<artifactId>jboss-jaxrs-api_1.1_spec</artifactId>
@@ -52,7 +74,7 @@
 						<version>2.4</version>
 						<configuration>
 							<outputDirectory>deployments</outputDirectory>
-							<warName>ROOT</warName>
+							<!-- <warName>ROOT</warName> -->
 						</configuration>
 					</plugin>
 					<plugin>
