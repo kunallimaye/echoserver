@@ -39,9 +39,9 @@ public class EchoService {
 	public Response echoMessage(@PathParam("message") String message) {
 
 		ResponseBuilder builder = null;
-		StringBuffer buffer = new StringBuffer("{");
+		StringBuffer buffer = new StringBuffer("|");
 				buffer.append(message);
-				buffer.append("}");
+				buffer.append("|");
 				buffer.append(" from Echo Service on OpenShift!");
 				
 		builder = Response.ok();
